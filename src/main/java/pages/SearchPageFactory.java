@@ -1,0 +1,55 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class SearchPageFactory {
+    WebDriver driver;
+
+    @FindBy(id="header-history")
+    WebElement headerHistory;
+
+    @FindBy(id="tab-flight-tab-hp")
+    WebElement fligthsTab;
+
+    @FindBy(id="flight-origin-hp-flight")
+    WebElement originCity;
+
+    @FindBy(id="flight-destination-hp-flight")
+    WebElement destinationCity;
+
+    @FindBy(id="flight-departing-hp-flight")
+    WebElement departureDate;
+
+    @FindBy(id="flight-returning-hp-flight")
+    WebElement returnDate;
+
+    public SearchPageFactory(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    public void clickFlightsTab() {
+//        headerHistory.click();
+        fligthsTab.click();
+    }
+
+    public void setOriginCity(String origin) {
+        originCity.sendKeys(origin);
+    }
+
+    public void setDestinationCity(String destination) {
+        destinationCity.sendKeys(destination);
+    }
+
+    public void setDepartureDate(String departure) {
+        departureDate.sendKeys(departure);
+    }
+
+    public void setReturnDate(String returndate) {
+        returnDate.sendKeys(returndate);
+    }
+
+}

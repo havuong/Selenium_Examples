@@ -13,7 +13,7 @@ public class SearchPage {
      * @return
      */
     public static WebElement originTextBox(WebDriver driver) {
-        element = driver.findElement(By.id("flight-origin"));
+        element = driver.findElement(By.id("package-origin-hp-package"));
         return element;
     }
 
@@ -28,7 +28,7 @@ public class SearchPage {
      * @return
      */
     public static WebElement destinationTextBox(WebDriver driver) {
-        element = driver.findElement(By.id("flight-destination"));
+        element = driver.findElement(By.id("package-destination-hp-package"));
         return element;
     }
 
@@ -38,7 +38,7 @@ public class SearchPage {
      * @return
      */
     public static WebElement departureDateTextBox(WebDriver driver) {
-        element = driver.findElement(By.id("flight-departing"));
+        element = driver.findElement(By.id("package-departing-hp-package"));
         return element;
     }
 
@@ -48,7 +48,7 @@ public class SearchPage {
      * @return
      */
     public static WebElement returnDateTextBox(WebDriver driver) {
-        element = driver.findElement(By.id("flight-returning"));
+        element = driver.findElement(By.id("package-returning-hp-package"));
         return element;
     }
 
@@ -58,7 +58,7 @@ public class SearchPage {
      * @return
      */
     public static WebElement searchButton(WebDriver driver) {
-        element = driver.findElement(By.id("search-button"));
+        element = driver.findElement(By.id("search-button-hp-package"));
         return element;
     }
 
@@ -77,7 +77,7 @@ public class SearchPage {
      */
     public static void navigateToFlightsTab(WebDriver driver) {
         driver.findElement(By.id("header-history")).click();
-        element = driver.findElement(By.id("tab-flight-tab"));
+        element = driver.findElement(By.id("tab-flight-tab-hp"));
         element.click();
     }
 }

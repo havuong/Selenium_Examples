@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class CommonFunctions {
     public static WebDriver driver;
 
-    public static WebElement getElement( How how, String locator ){
+    public static WebElement getElement(How how, String locator) {
         switch (how) {
             case CLASS_NAME:
                 return driver.findElement(By.className(locator));
@@ -43,74 +43,88 @@ public class CommonFunctions {
         return null;
     }
 
-    public static void setBrowser(String browserName){
-        switch (browserName){
-            case "ff":
-                WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
-                break;
-            case "ie":
-                WebDriverManager.iedriver().setup();
-                driver = new InternetExplorerDriver();
-                break;
-            case "chr":
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
-                break;
-            case "edge":
-                WebDriverManager.edgedriver().setup();
-                driver = new EdgeDriver();
-                break;
-        }
+    public static WebDriver setBrowser(String browserName) {
+        if (driver == null) {
+            switch (browserName) {
+                case "ff":
+                    WebDriverManager.firefoxdriver().setup();
+                    driver = new FirefoxDriver();
+                    break;
+                case "ie":
+                    WebDriverManager.iedriver().setup();
+                    driver = new InternetExplorerDriver();
+                    break;
+                case "chr":
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
+                    break;
+                case "edge":
+                    WebDriverManager.edgedriver().setup();
+                    driver = new EdgeDriver();
+                    break;
+            }
 
+        }
+        return driver;
     }
 
-    public static void visit(String url){
+    public static void visit(String url) {
         driver.get(url);
     }
-    public static void closeBrowser(){
+
+    public static void closeBrowser() {
         driver.quit();
     }
-    public static void waitForElement(How how,String locator,int timeout){
-        new WebDriverWait(driver,timeout).until(ExpectedConditions.visibilityOf(getElement(how, locator)));
+
+    public static void waitForElement(How how, String locator, int timeout) {
+        new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOf(getElement(how, locator)));
     }
-    public static void click(How how, String locator){
-        waitForElement(how,locator,30);
+
+    public static void click(How how, String locator) {
+        waitForElement(how, locator, 30);
         getElement(how, locator).click();
     }
-    public static void dblClick (How how, String locator) {
+
+    public static void dblClick(How how, String locator) {
         Actions actions = new Actions(driver);
-        waitForElement(how,locator,30);
-        actions.doubleClick(getElement(how,locator)).perform();
+        waitForElement(how, locator, 30);
+        actions.doubleClick(getElement(how, locator)).perform();
     }
-    public static void fill(How how,String locator,String withText){
-        waitForElement(how,locator,30);
+
+    public static void fill(How how, String locator, String withText) {
+        waitForElement(how, locator, 30);
         getElement(how, locator).clear();
         getElement(how, locator).sendKeys(withText);
     }
-    public static void fillKeys(How how,String locator,Keys withKey){
-        waitForElement(how,locator,30);
+
+    public static void fillKeys(How how, String locator, Keys withKey) {
+        waitForElement(how, locator, 30);
         getElement(how, locator).clear();
         getElement(how, locator).sendKeys(withKey);
     }
-    public static String getText(How how, String locator){
-        waitForElement(how,locator,30);
+
+    public static String getText(How how, String locator) {
+        waitForElement(how, locator, 30);
         return getElement(how, locator).getText();
     }
-    public static String getAttri(How how,String locator,String attribute){
-        waitForElement(how,locator,30);
+
+    public static String getAttri(How how, String locator, String attribute) {
+        waitForElement(how, locator, 30);
         return getElement(how, locator).getAttribute(attribute);
     }
-    public static String getCSSValue(How how,String locator,String CSSValue){
-        waitForElement(how,locator,30);
+
+    public static String getCSSValue(How how, String locator, String CSSValue) {
+        waitForElement(how, locator, 30);
         return getElement(how, locator).getCssValue(CSSValue);
     }
-    public static boolean isElementDisplayed(How how,String locator){
-        waitForElement(how,locator,30);
+
+    public static boolean isElementDisplayed(How how, String locator) {
+        waitForElement(how, locator, 30);
         return getElement(how, locator).isDisplayed();
     }
-    public static boolean isElementSelected(How how,String locator){
-        waitForElement(how,locator,30);
+
+    public static boolean isElementSelected(How how, String locator) {
+        waitForElement(how, locator, 30);
         return getElement(how, locator).isSelected();
     }
 }
