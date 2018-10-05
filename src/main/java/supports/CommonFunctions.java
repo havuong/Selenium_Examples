@@ -1,6 +1,8 @@
 package supports;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CommonFunctions {
     public static WebDriver driver;
+    final static Logger logger = LogManager.getLogger(CommonFunctions.class);
 
     public static WebElement getElement(How how, String locator) {
         switch (how) {
@@ -44,6 +47,7 @@ public class CommonFunctions {
     }
 
     public static WebDriver setBrowser(String browserName) {
+        logger.info("========== Open browser ==========");
         if (driver == null) {
             switch (browserName) {
                 case "ff":
@@ -69,10 +73,12 @@ public class CommonFunctions {
     }
 
     public static void visit(String url) {
+        logger.info("Get: " + url);
         driver.get(url);
     }
 
     public static void closeBrowser() {
+        logger.info("========== Close browser ==========");
         driver.quit();
     }
 
@@ -81,6 +87,7 @@ public class CommonFunctions {
     }
 
     public static void click(How how, String locator) {
+        logger.info("Click: " + locator);
         waitForElement(how, locator, 30);
         getElement(how, locator).click();
     }
