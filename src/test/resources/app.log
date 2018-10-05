@@ -1,0 +1,10 @@
+[INFO ] 2019-06-08 12:41:20.963 [main] CommonFunctions - ========== Open browser ==========
+[DEBUG] 2019-06-08 12:41:20.970 [main] CommonFunctions - debug Test
+[WARN ] 2019-06-08 12:41:20.970 [main] CommonFunctions - warning Test
+[ERROR] 2019-06-08 12:41:20.970 [main] CommonFunctions - error Test
+[INFO ] 2019-06-08 12:41:28.426 [main] CommonFunctions - Get: http://the-internet.herokuapp.com/checkboxes
+[INFO ] 2019-06-08 12:41:34.289 [main] CommonFunctions - ========== Open browser ==========
+[DEBUG] 2019-06-08 12:41:34.289 [main] CommonFunctions - debug Test
+[WARN ] 2019-06-08 12:41:34.289 [main] CommonFunctions - warning Test
+[ERROR] 2019-06-08 12:41:34.290 [main] CommonFunctions - error Test
+[INFO ] 2019-06-08 12:41:34.290 [main] CommonFunctions - Get: http://the-internet.herokuapp.com/checkboxes
