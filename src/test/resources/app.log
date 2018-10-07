@@ -8,3 +8,15 @@
 [WARN ] 2019-06-08 12:41:34.289 [main] CommonFunctions - warning Test
 [ERROR] 2019-06-08 12:41:34.290 [main] CommonFunctions - error Test
 [INFO ] 2019-06-08 12:41:34.290 [main] CommonFunctions - Get: http://the-internet.herokuapp.com/checkboxes
+[INFO ] 2019-06-08 14:53:23.583 [main] CommonFunctions - ========== Open browser ==========
+[INFO ] 2019-06-08 14:53:32.024 [main] CommonFunctions - Get: http://the-internet.herokuapp.com/dropdown
+[INFO ] 2019-06-08 14:54:10.927 [main] CommonFunctions - ========== Open browser ==========
+[INFO ] 2019-06-08 14:54:18.003 [main] CommonFunctions - Get: http://the-internet.herokuapp.com/dropdown
+[INFO ] 2019-06-08 14:55:24.679 [main] CommonFunctions - ========== Open browser ==========
+[INFO ] 2019-06-08 14:55:30.634 [main] CommonFunctions - Get: http://the-internet.herokuapp.com/dropdown
+[INFO ] 2019-06-08 14:56:45.989 [main] CommonFunctions - ========== Open browser ==========
+[INFO ] 2019-06-08 14:56:53.259 [main] CommonFunctions - Get: http://the-internet.herokuapp.com/dropdown
+[INFO ] 2019-06-08 15:00:41.238 [main] CommonFunctions - ========== Open browser ==========
+[INFO ] 2019-06-08 15:00:48.847 [main] CommonFunctions - Get: http://the-internet.herokuapp.com/dropdown
+[INFO ] 2019-06-08 15:01:55.332 [main] CommonFunctions - ========== Open browser ==========
+[INFO ] 2019-06-08 15:02:02.748 [main] CommonFunctions - Get: http://the-internet.herokuapp.com/dropdown

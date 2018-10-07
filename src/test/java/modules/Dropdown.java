@@ -5,6 +5,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import java.util.List;
 
@@ -20,7 +21,11 @@ public class Dropdown {
 //        selectList.selectByVisibleText("Option 1");
 //        selectList.selectByValue("1");
         selectList.selectByIndex(1);
-        Assert.assertEquals(selectList.getFirstSelectedOption().getText(),"Option 1");
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(selectList.getFirstSelectedOption().getText(),"Option 2");
+        selectList.selectByIndex(2);
+        softAssert.assertEquals(selectList.getFirstSelectedOption().getText(),"Option 2");
+        softAssert.assertAll();
     }
 
     @Test(enabled = false)
