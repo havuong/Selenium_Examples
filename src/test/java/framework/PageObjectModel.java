@@ -1,4 +1,4 @@
-package modules;
+package framework;
 
 import org.testng.annotations.Test;
 import pages.SearchPage;

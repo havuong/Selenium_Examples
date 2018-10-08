@@ -1,4 +1,4 @@
-package modules;
+package selenium;
 
 import org.openqa.selenium.support.How;
 import org.testng.Assert;
