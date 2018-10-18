@@ -28,6 +28,6 @@ public class ListenersTest2 {
     @Test
     public void testMethod2() {
         System.out.println("TestNG_ListenersTest2 -> Code in testMethod2");
-        Assert.assertTrue(false);
+        Assert.assertTrue(true);
     }
 }
