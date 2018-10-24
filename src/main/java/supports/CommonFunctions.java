@@ -83,19 +83,30 @@ public class CommonFunctions {
     }
 
     public static void waitForElement(How how, String locator, int timeout) {
-        new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOf(getElement(how, locator)));
+        new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(getElement(how, locator)));
     }
 
     public static void click(How how, String locator) {
         logger.info("Click: " + locator);
-        waitForElement(how, locator, 30);
-        getElement(how, locator).click();
+        try {
+            waitForElement(how, locator, 30);
+            getElement(how, locator).click();
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public static void dblClick(How how, String locator) {
         Actions actions = new Actions(driver);
         waitForElement(how, locator, 30);
         actions.doubleClick(getElement(how, locator)).perform();
+    }
+
+    public static void moveToElement(How how, String locator) {
+        Actions actions = new Actions(driver);
+        waitForElement(how, locator, 30);
+        actions.moveToElement(getElement(how, locator)).build().perform();
     }
 
     public static void fill(How how, String locator, String withText) {
@@ -111,7 +122,12 @@ public class CommonFunctions {
     }
 
     public static String getText(How how, String locator) {
-        waitForElement(how, locator, 30);
+        try {
+            waitForElement(how, locator, 30);
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         return getElement(how, locator).getText();
     }
 
