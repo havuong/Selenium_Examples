@@ -88,3 +88,18 @@
 [INFO ] 2019-06-24 14:28:00.251 [main] CommonFunctions - Click: comp-iiqg1vggactionTitle
 [INFO ] 2019-06-24 14:28:00.753 [main] CommonFunctions - Click: signUpDialogswitchDialogLink
 [INFO ] 2019-06-24 14:28:01.567 [main] CommonFunctions - Click: memberLoginDialogokButton
+[INFO ] 2019-06-24 18:02:51.316 [main] CommonFunctions - ========== Open browser ==========
+[INFO ] 2019-06-24 18:03:01.978 [main] CommonFunctions - Get: http://www.letskodeit.com/
+[INFO ] 2019-06-24 18:03:17.131 [main] CommonFunctions - Click: div[title='Back to site']>svg
+[INFO ] 2019-06-24 18:03:17.465 [main] CommonFunctions - Click: comp-iiqg1vggactionTitle
+[INFO ] 2019-06-24 18:03:17.828 [main] CommonFunctions - Click: signUpDialogswitchDialogLink
+[INFO ] 2019-06-24 18:07:15.152 [main] CommonFunctions - ========== Open browser ==========
+[INFO ] 2019-06-24 18:07:21.308 [main] CommonFunctions - Get: http://www.letskodeit.com/
+[INFO ] 2019-06-24 18:07:34.334 [main] CommonFunctions - Click: div[title='Back to site']>svg
+[INFO ] 2019-06-24 18:07:34.593 [main] CommonFunctions - Click: comp-iiqg1vggactionTitle
+[INFO ] 2019-06-24 18:07:34.889 [main] CommonFunctions - Click: signUpDialogswitchDialogLink
+[INFO ] 2019-06-24 18:09:36.177 [main] CommonFunctions - ========== Open browser ==========
+[INFO ] 2019-06-24 18:09:42.264 [main] CommonFunctions - Get: http://www.letskodeit.com/
+[INFO ] 2019-06-24 18:09:57.176 [main] CommonFunctions - Click: div[title='Back to site']>svg
+[INFO ] 2019-06-24 18:09:57.438 [main] CommonFunctions - Click: comp-iiqg1vggactionTitle
+[INFO ] 2019-06-24 18:09:57.733 [main] CommonFunctions - Click: signUpDialogswitchDialogLink

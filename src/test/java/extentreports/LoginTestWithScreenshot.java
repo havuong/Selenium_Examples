@@ -21,7 +21,7 @@ public class LoginTestWithScreenshot {
 
     @BeforeClass
     public void beforeClass() {
-        report = new ExtentReports("./src/test/resources/ExtentReport.html");
+        report = ExtentFactory.getInstance();
         test = report.startTest("Verify Welcome Text");
         test.log(LogStatus.INFO, "Browser Started...");
         setBrowser("ff");
