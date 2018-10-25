@@ -30,3 +30,9 @@
 [INFO ] 2018-10-25 21:11:37.209 [main] CommonFunctions - Click: div[title='Back to site']>svg
 [INFO ] 2018-10-25 21:11:37.494 [main] CommonFunctions - Click: comp-iiqg1vggactionTitle
 [INFO ] 2018-10-25 21:11:37.787 [main] CommonFunctions - Click: signUpDialogswitchDialogLink
+[INFO ] 2018-10-25 22:02:53.247 [main] CommonFunctions - ========== Open browser ==========
+[INFO ] 2018-10-25 22:03:02.566 [main] CommonFunctions - Get: http://www.letskodeit.com/
+[INFO ] 2018-10-25 22:03:15.552 [main] CommonFunctions - Click: div[title='Back to site']>svg
+[INFO ] 2018-10-25 22:03:15.850 [main] CommonFunctions - Click: comp-iiqg1vggactionTitle
+[INFO ] 2018-10-25 22:03:16.165 [main] CommonFunctions - Click: signUpDialogswitchDialogLink
+[INFO ] 2018-10-25 22:03:16.237 [main] CommonFunctions - ========== Close browser ==========

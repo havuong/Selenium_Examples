@@ -38,23 +38,13 @@ public class LoginTest {
     @Test
     public void test1_validLoginTest() throws Exception {
         hp = new HomePage(driver, test);
-        hp.clickSignUpLink();
-
-        click(ID, "signUpDialogswitchDialogLink");
-        test.log(LogStatus.INFO, "Clicked on login link");
-
-        fill(XPATH, "//div[@id='memberLoginDialogemail']//input", "test1@email.com");
-        test.log(LogStatus.INFO, "Enter email");
-
-        fill(XPATH, "//div[@id='memberLoginDialogpassword']//input", "abcabc");
-        test.log(LogStatus.INFO, "Enter password");
-
-        click(ID, "memberLoginDialogokButton");
-        test.log(LogStatus.INFO, "Clicked Go button");
+        hp.login("test@email.com", "abcabc");
 
         Thread.sleep(3000);
 
-        Assert.assertTrue(getText(XPATH, "//div[text()='Hello test1']") != null); //correct
+        boolean result = hp.isWelcomeTextPresent();
+
+        Assert.assertTrue(result);
         test.log(LogStatus.PASS, "Verified Welcome Text");
     }
 
