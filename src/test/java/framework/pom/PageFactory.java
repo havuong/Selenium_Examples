@@ -1,4 +1,4 @@
-package framework;
+package framework.pom;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
