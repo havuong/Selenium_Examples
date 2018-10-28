@@ -76,7 +76,7 @@ public class SearchPage {
      * @param driver
      */
     public static void navigateToFlightsTab(WebDriver driver) {
-        driver.findElement(By.id("header-history")).click();
+//        driver.findElement(By.id("header-history")).click();
         element = driver.findElement(By.id("tab-flight-tab-hp"));
         element.click();
     }
